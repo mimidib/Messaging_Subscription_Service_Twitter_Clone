@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MessageController {
+
     @Autowired
     MessageRepository messageRepository;
 
@@ -16,9 +17,10 @@ public class MessageController {
     public @ResponseBody Iterable<Message> getAllMessages(){
         return messageRepository.findAll();
     }
+
     //Get all messages by a specific producer
     @GetMapping("/producermessages")
-    public @ResponseBody Iterable<Message> getProducerMessage(@RequestParam int producer_id){
+    public @ResponseBody Iterable<Message> getProducerMessages(@RequestParam int producer_id){
         return messageRepository.getProducerMessages(producer_id);
     }
 }

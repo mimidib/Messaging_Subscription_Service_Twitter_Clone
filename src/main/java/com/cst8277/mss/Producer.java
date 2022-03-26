@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="producer")
 public class Producer {
-    //id is not auto incremented, it references the user id from ums
+    //id is not auto incremented, it references the user id from ums tables
     @Id
     private int p_id;
     private String comment;

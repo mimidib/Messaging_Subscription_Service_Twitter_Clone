@@ -12,11 +12,12 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SubscriptionPK implements Serializable { //this class is the creation of Subscription Composite primary key : https://wecancode.live/composite-key-with-jpa-and-hibernate/
-    @Column(name = "producer_id")
+    @Column(name = "producer_p_id")
     private int producer_p_id;
     @Column(name = "subscriber_s_id")
     private int subscriber_s_id;
 
+    //Getters
     public int getProducer_p_id() {
         return producer_p_id;
     }
@@ -25,7 +26,7 @@ public class SubscriptionPK implements Serializable { //this class is the creati
         return subscriber_s_id;
     }
 
-    //equals, hashcode definitions will allow identifying the same object at different sessions
+    //equals & hashcode definitions will allow identifying the same object at different sessions
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

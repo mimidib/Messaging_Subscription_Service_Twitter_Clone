@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "message")
 public class Message {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //relies on mysql to generate this value
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //relies on mysql to generate this auto incremented value
     private int id; //AUTO INCREMENT
     private String content;
     private int created;

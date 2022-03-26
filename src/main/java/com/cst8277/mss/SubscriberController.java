@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SubscriberController {
+
     @Autowired
     SubscriberRepository subscriberRepository;
+
     //Get all messages for a specific subscriber
     @GetMapping("/subscribermessages")
-    public @ResponseBody Iterable<Message> getAllSubscriberMessages(@RequestParam int s_id){ //ref subscriber id here
-        return subscriberRepository.getAllSubscriberMessages(s_id); //ref subscriber id here
+    public @ResponseBody Iterable<Message> getAllSubscriberMessages(@RequestParam int s_id){ //ref the specific subscriber id here
+        return subscriberRepository.getAllSubscriberMessages(s_id); //ref subscriber.s_id here
     }
 }
